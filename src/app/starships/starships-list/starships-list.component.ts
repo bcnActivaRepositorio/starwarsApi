@@ -9,8 +9,14 @@ import { StarshipService } from 'src/app/services/starship.service';
 })
 export class StarshipsListComponent implements OnInit {
 
+  // starships
   starShips?: any[] = [];
   starship: any[] = [];
+
+  // pilots
+  allPilots: any [] = [];
+  thePilot: any[] = [];
+
   constructor(private starshipService: StarshipService) { }
 
   ngOnInit(){
@@ -33,4 +39,16 @@ export class StarshipsListComponent implements OnInit {
       });
   }
 
+  // pilots
+   // method
+   getAllPilotss() {
+    this.starshipService.getAllPilots()
+    .subscribe(
+      (data: any) => {
+        this.allPilots = data.results;
+      },
+      error => {
+        console.log(error);
+      });
+  }
 }

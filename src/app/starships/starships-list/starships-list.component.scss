@@ -1,3 +1,12 @@
+@import "../../../Sass/colors";
 img{
-  height:25vh;
+ // height:15vh;
+  width:15vw
+}
+main {
+  background-color: $myBgDark;
+}
+.card {
+  width:35vw;
+  background-color: transparent;
 }

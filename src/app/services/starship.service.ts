@@ -15,6 +15,8 @@ export class StarshipService {
   private urlStarships: string = "starships/"
   // movies
   private urlMovies: string = "films/"
+  // pilots
+  private urlPilots: string = "people/"
 
 
   constructor( private httpClient: HttpClient) { }
@@ -27,11 +29,17 @@ export class StarshipService {
 getStraships(){
   return this.httpClient.get<Starship[]>(`${this.ROOT_URL}${this.urlStarships}`);
 }
+
+getAllPilots() {
+  return this.httpClient.get<Starship[]>(`${this.ROOT_URL}${this.urlPilots}`);
+}
 // get this just one
 getOneStarship(id: number) {
-  console.log( this.httpClient.get<Starship[]>(`${this.ROOT_URL}${this.urlStarships}${id}`));
-  return  this.httpClient.get<Starship[]>(`${this.ROOT_URL}${this.urlStarships}${id}`);
+  return  this.httpClient.get<Starship[]>(`${this.ROOT_URL}${this.urlStarships}:${id}`);
 
+}
+getOnePilot(id: number) {
+  return  this.httpClient.get<Starship[]>(`${this.ROOT_URL}${this.urlPilots}:${id}`);
 }
 
 }

@@ -1,42 +1,22 @@
-<!-- <ul *ngIf="starShips">
-  <li *ngFor="let starship of starShips">
-    {{ starship.name }}
-  </li>
-</ul> -->
+
 <main>
-<div class="container mt-5 mb3">
-<div class="row d-flex flex-wrap" *ngIf="starShips">
-  <div class="card m-3 flex-fill"  >
+<div class="container pt-5 mb3">
+<div class="row " *ngIf="starShips">
+  <div class="card-content col-sm-6 col-md-4"  *ngFor="let starship of starShips">
+  <div class="card m-3 flex-fill" style="width: 20rem;">
     <a href="">
-      <img src="../../../assets/flaconSmall.png" alt="Starships" >
+      <img src="../../../assets/flacon3.png" alt="Starships" >
     </a>
   </div>
-  <div class="card-body" *ngFor="let starship of starShips">
+  <div class="card-body">
     <div class="card-title">
-      <h4></h4>
+      <h4>{{ starship.name }}</h4>
     </div>
   </div>
 </div>
+</div>
   <!------------------------------------------->
-  <div class="col-xl-3 col-sm-6 col-12">
-    <div class="card" *ngIf="starShips">
-      <div class="card-content" *ngFor="let starship of starShips">
-        <div class="card-body">
-          <div class="media d-flex">
-            <div class="align-self-center">
-              <a href="">
-                <img src="../../../assets/falconmiddle.png" alt="Starships" srcset="">
-              </a>
-            </div>
-            <div class="media-body text-right" >
-              <h3></h3>
-              <span>{{ starship.name }}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
   <!--------------------------------------------------------------->
 </div>
 </main>
