@@ -4,29 +4,37 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng serve` or `npm start`for a dev server. Navigate to `http://localhost:4500/`. The app will automatically reload if you change any of the source files.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+no test in this project
 
-## Running end-to-end tests
+## Objective
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Achive 15 points from Barcelona Activa last essay
 
-## Further help
+Either a JS shopping cart or Angular project
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Why Angular?
 
-### Documentation
+Brings the opportunity to fetch the data from an [API](https://swapi.dev/documentation#base)
+
+## Elements choosen
+
+  * Fetch data from an end-point
+  * Show the data in the screen
+  * Navbar with working links
+  * Roughly (lack of time) starwars identity
+
+## Problems solved
+
+  * CORS
+
+## Documentation that helped
 
 [Cors](https://www.techiediaries.com/fix-cors-with-angular-cli-proxy-configuration/)
- 
+
+## Conclusions
+
+I really need to learn to let go. I could keep working on this to make it perfect for another day. I could use just one. But the minimum requirements had been achieved. And this time, no more commits to come.
