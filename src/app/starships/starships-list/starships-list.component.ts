@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 // starship
 import { StarshipService } from 'src/app/services/starship.service';
-import { Starship } from '../models/starship.model';
 
 @Component({
   selector: 'sw-starships-list',
@@ -13,14 +12,15 @@ export class StarshipsListComponent implements OnInit {
 
   starships?: any[] = [];
 
-  constructor(private starshipService: StarshipService) { }
+  constructor(private starshipService: StarshipService,
+              private router: Router) { }
 
   ngOnInit(){
     this.starshipService.getStraships()
     .subscribe(
       (data: any) => {
-        this.starships = data;
-        console.log(data);
+        this.starships = data.results;
+        console.log(this.starships);
       },
       error => {
         console.log(error);
