@@ -19,7 +19,7 @@ export class StarshipsListComponent implements OnInit {
 
    }
 
-   // methods
+   // method
   getAllStarships() {
     this.starshipService.getStraships()
     .subscribe(

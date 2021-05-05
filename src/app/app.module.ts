@@ -11,7 +11,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './views/home/home.component';
 import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
-import { StarshipsModule } from './starships/starships.module';
 import { StarshipsListComponent } from './starships/starships-list/starships-list.component';
 import { CommonModule } from '@angular/common';
 
@@ -29,7 +28,6 @@ import { CommonModule } from '@angular/common';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    StarshipsModule,
     CommonModule
 
   ],
