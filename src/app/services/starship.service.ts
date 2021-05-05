@@ -22,8 +22,16 @@ export class StarshipService {
 
 
   // methods
+
+  // get them all
 getStraships(){
-  console.log( this.httpClient.get<Starship[]>(`${this.ROOT_URL}${this.urlStarships}`))
   return this.httpClient.get<Starship[]>(`${this.ROOT_URL}${this.urlStarships}`);
 }
+// get this just one
+getOneStarship(id: number) {
+  console.log( this.httpClient.get<Starship[]>(`${this.ROOT_URL}${this.urlStarships}${id}`));
+  return  this.httpClient.get<Starship[]>(`${this.ROOT_URL}${this.urlStarships}${id}`);
+
+}
+
 }

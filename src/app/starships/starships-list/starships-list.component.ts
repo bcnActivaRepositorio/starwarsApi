@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 // starship
 import { StarshipService } from 'src/app/services/starship.service';
 
@@ -10,22 +9,28 @@ import { StarshipService } from 'src/app/services/starship.service';
 })
 export class StarshipsListComponent implements OnInit {
 
-  starships?: any[] = [];
-
-  constructor(private starshipService: StarshipService,
-              private router: Router) { }
+  starShips?: any[] = [];
+  starship: any[] = [];
+  constructor(private starshipService: StarshipService) { }
 
   ngOnInit(){
+
+  this.getAllStarships();
+
+   }
+
+   // methods
+  getAllStarships() {
     this.starshipService.getStraships()
     .subscribe(
       (data: any) => {
-        this.starships = data.results;
-        console.log(this.starships);
+        this.starShips = data.results;
+        console.log(this.starShips);
+        console.log(this.starShips?.map((e: any) => e = e.url));
       },
       error => {
         console.log(error);
-      }
-    );
+      });
   }
 
 }
