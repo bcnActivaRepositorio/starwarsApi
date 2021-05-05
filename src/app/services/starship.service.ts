@@ -23,7 +23,7 @@ export class StarshipService {
 
   // methods
 getStraships(){
-  console.log('get staships woorks');
+  console.log( this.httpClient.get<Starship[]>(`${this.ROOT_URL}${this.urlStarships}`))
   return this.httpClient.get<Starship[]>(`${this.ROOT_URL}${this.urlStarships}`);
 }
 }

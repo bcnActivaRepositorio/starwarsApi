@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+// starship
+import { StarshipService } from 'src/app/services/starship.service';
+import { Starship } from '../models/starship.model';
 
 @Component({
   selector: 'sw-starships-list',
@@ -7,9 +11,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StarshipsListComponent implements OnInit {
 
-  constructor() { }
+  starships?: any[] = [];
 
-  ngOnInit(): void {
+  constructor(private starshipService: StarshipService) { }
+
+  ngOnInit(){
+    this.starshipService.getStraships()
+    .subscribe(
+      (data: any) => {
+        this.starships = data;
+        console.log(data);
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
 
 }

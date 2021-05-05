@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 // made components
 import { HeaderComponent } from './components/header/header.component';
@@ -11,6 +11,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './views/home/home.component';
 import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
+import { StarshipsModule } from './starships/starships.module';
+import { StarshipsListComponent } from './starships/starships-list/starships-list.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -19,13 +22,16 @@ import { PageNotFoundComponent } from './views/page-not-found/page-not-found.com
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    StarshipsListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClient
+    StarshipsModule,
+    CommonModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,5 @@
-<p>starships-list works!</p>
+<ul *ngIf="starships">
+  <li *ngFor="let starship of starships">
+    {{ starship.name }}
+  </li>
+</ul>

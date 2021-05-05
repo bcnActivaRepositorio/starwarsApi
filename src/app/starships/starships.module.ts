@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StarshipsListComponent } from './starships-list/starships-list.component';
+//import { StarshipsListComponent } from './starships-list/starships-list.component';
 
 
 
 
 @NgModule({
-  declarations: [StarshipsListComponent],
+  declarations: [],
   imports: [
     CommonModule
   ]
